@@ -9,8 +9,7 @@ import logger from 'redux-logger';
 
 import {pokemonReducer} from '../src/reducers/index';
 
-const store = createStore(pokemonReducer);
-console.log(store.getState());
+const store = createStore(pokemonReducer, applyMiddleware(logger));
 
 
 ReactDOM.render(
