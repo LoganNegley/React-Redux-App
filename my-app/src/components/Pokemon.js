@@ -6,7 +6,7 @@ const Pokemon = (props)=>{
     return (
         <div>
         <button onClick={props.fetchPokemon}>Lets Catch A New Pokemon</button>
-           {!props.pokemon && <h2>Catch a new Pokemon</h2>}
+           {!props.pokemon && !props.isLoading && <h2>Catch a new Pokemon</h2>}
         </div>
     );
 };
