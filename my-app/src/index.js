@@ -6,10 +6,11 @@ import * as serviceWorker from './serviceWorker';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import logger from 'redux-logger';
+import thunk from 'redux-thunk';
 
 import {pokemonReducer} from '../src/reducers/index';
 
-const store = createStore(pokemonReducer, applyMiddleware(logger));
+const store = createStore(pokemonReducer, applyMiddleware(thunk,logger));
 
 
 ReactDOM.render(
