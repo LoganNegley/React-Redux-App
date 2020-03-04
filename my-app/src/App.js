@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect } from 'react-redux';
 import {pokemonReducer} from '../src/reducers/index';
 import './App.css';
 import Pokemon from '../src/components/Pokemon';
@@ -13,15 +12,4 @@ function App(props) {
   );
 }
 
-
-// MapStateToProps goes here!!!
-const mapStateToProps = state => {
- return {
-   isLoading: state.isLoading,
-   pokemon: state.pokemon,
-   error: state.error,
- };
-};
-
-
-export default connect(mapStateToProps,)(App);
+export default App;
