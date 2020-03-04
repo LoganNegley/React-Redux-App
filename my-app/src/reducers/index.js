@@ -1,10 +1,15 @@
 
 const initialState = {
-    name:null,
+    isLoading: false,
+    pokemon: null,
+    error: ''
 
 }
 
 
 export function pokemonReducer(state = initialState, action){
-    return{}
+    switch(action.type){
+        default: 
+        return state;
+    }
 }

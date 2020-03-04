@@ -1,20 +1,23 @@
 import React from 'react';
 import {connect } from 'react-redux';
+import {pokemonReducer} from '../src/reducers/index';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-
+      <h1>Get Info Of A Random Pokemon</h1>
     </div>
   );
 }
 
 
 // MapStateToProps goes here!!!
-const mapStateToProps=state => {
+const mapStateToProps = state => {
  return {
-   name:state.name,
+   isLoading: state.isLoading,
+   pokemon: state.pokemon,
+   error: state.error,
  };
 };
 
