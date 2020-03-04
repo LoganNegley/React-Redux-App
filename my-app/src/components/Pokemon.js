@@ -4,10 +4,16 @@ import {connect } from 'react-redux';
 const Pokemon = (props)=>{
     return (
         <div>
-            <h2> Coming from Pokemon Component</h2>
+        <button>Lets Catch A New Pokemon</button>
+           {!props.pokemon && <h2>Catch a new Pokemon</h2>}
         </div>
     );
 };
+
+
+
+
+
 
 // MapStateToProps goes here!!!
 const mapStateToProps = state => {
@@ -18,4 +24,4 @@ const mapStateToProps = state => {
  };
 };
 
-export default connect(mapStateToProps,)(Pokemon)
+export default connect(mapStateToProps,{})(Pokemon)
