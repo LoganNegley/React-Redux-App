@@ -1,10 +1,11 @@
 import React from 'react';
 import {connect } from 'react-redux';
+import {fetchPokemon} from '../actions/index';
 
 const Pokemon = (props)=>{
     return (
         <div>
-        <button>Lets Catch A New Pokemon</button>
+        <button onClick={props.fetchPokemon}>Lets Catch A New Pokemon</button>
            {!props.pokemon && <h2>Catch a new Pokemon</h2>}
         </div>
     );
@@ -24,4 +25,4 @@ const mapStateToProps = state => {
  };
 };
 
-export default connect(mapStateToProps,{})(Pokemon)
+export default connect(mapStateToProps,{fetchPokemon})(Pokemon)
