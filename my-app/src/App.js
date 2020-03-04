@@ -10,4 +10,13 @@ function App() {
   );
 }
 
-export default connect()(App);
+
+// MapStateToProps goes here!!!
+const mapStateToProps=state => {
+ return {
+   name:state.name,
+ };
+};
+
+
+export default connect(mapStateToProps)(App);
