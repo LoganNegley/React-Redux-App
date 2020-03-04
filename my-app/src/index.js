@@ -5,10 +5,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
+import logger from 'redux-logger';
 
-import pokemonReducer from '../src/reducers/index';
+import {pokemonReducer} from '../src/reducers/index';
 
-const store = createStore(pokemonReducer);
+const store = createStore(pokemonReducer, applyMiddleware(logger));
+console.log(store.getState());
 
 
 ReactDOM.render(
