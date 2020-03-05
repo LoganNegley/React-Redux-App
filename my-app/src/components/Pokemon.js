@@ -20,9 +20,7 @@ const Pokemon = (props)=>{
             />
         )}
 
-        {props.pokemon && !props.isLoading && (
-        <h4>{props.pokemon.name}</h4>
-        )}
+
         </div>
     );
 };
