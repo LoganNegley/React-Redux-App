@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const fetchJokes = () => {
     return dispatch => {
-        dispatch({type: 'FETCHING_POKEMON_START'})
+        dispatch({type: 'FETCHING_JOKES_START'})
         axios.get('https://icanhazdadjoke.com/', {headers:{'Accept': 'application/json'}})
         .then(response => {
             console.log(response)

@@ -3,7 +3,7 @@ import {connect } from 'react-redux';
 import {fetchJokes} from '../actions/index';
 import Loader from 'react-loader-spinner';
 
-const Pokemon = (props)=>{
+const Jokes = (props)=>{
     return (
         <div>
         <button onClick={props.fetchJoke}>Lets Catch A New Pokemon</button>
@@ -41,4 +41,4 @@ const mapStateToProps = state => {
  };
 };
 
-export default connect(mapStateToProps,{fetchJoke})(Jokes)
+export default connect(mapStateToProps,{fetchJokes})(Jokes)

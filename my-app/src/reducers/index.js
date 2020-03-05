@@ -9,7 +9,7 @@ const initialState = {
 
 export function jokeReducer(state = initialState, action){
     switch(action.type){
-        case 'FETCHING_POKEMON_START':
+        case 'FETCHING_JOKES_START':
             return{
                 ...state,
                 isLoading: true
