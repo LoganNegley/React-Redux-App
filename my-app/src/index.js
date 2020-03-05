@@ -8,9 +8,9 @@ import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
-import {pokemonReducer} from '../src/reducers/index';
+import {jokeReducer} from '../src/reducers/index';
 
-const store = createStore(pokemonReducer, applyMiddleware(thunk,logger));
+const store = createStore(jokeReducer, applyMiddleware(thunk,logger));
 
 
 ReactDOM.render(

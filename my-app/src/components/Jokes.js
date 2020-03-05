@@ -1,13 +1,13 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import {fetchPokemon} from '../actions/index';
+import {fetchJokes} from '../actions/index';
 import Loader from 'react-loader-spinner';
 
 const Pokemon = (props)=>{
     return (
         <div>
-        <button onClick={props.fetchPokemon}>Lets Catch A New Pokemon</button>
-           {!props.pokemon && !props.isLoading && (
+        <button onClick={props.fetchJoke}>Lets Catch A New Pokemon</button>
+           {!props.joke && !props.isLoading && (
                <h2>Catch a new Pokemon</h2>
            )}
         {props.isLoading && (
@@ -20,7 +20,7 @@ const Pokemon = (props)=>{
             />
         )}
 
-        {props.pokemon && !props.isLoading && (
+        {props.joke && !props.isLoading && (
                 <h1>Pokemon</h1>
         )}
         </div>
@@ -36,9 +36,9 @@ const Pokemon = (props)=>{
 const mapStateToProps = state => {
  return {
    isLoading: state.isLoading,
-   pokemon: state.pokemon,
+   joke: state.joke,
    error: state.error,
  };
 };
 
-export default connect(mapStateToProps,{fetchPokemon})(Pokemon)
+export default connect(mapStateToProps,{fetchJoke})(Jokes)

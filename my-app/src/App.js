@@ -7,7 +7,7 @@ function App(props) {
   return (
     <div className="App">
       <h1>Get A Joke</h1>
-      <Pokemon/>
+      <Jokes/>
     </div>
   );
 }
