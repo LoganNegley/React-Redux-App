@@ -1,13 +1,13 @@
 
 const initialState = {
     isLoading: false,
-    pokemon: null,
+    joke: null,
     error: ''
 
 }
 
 
-export function pokemonReducer(state = initialState, action){
+export function jokeReducer(state = initialState, action){
     switch(action.type){
         case 'FETCHING_POKEMON_START':
             return{
@@ -17,7 +17,7 @@ export function pokemonReducer(state = initialState, action){
         case 'FETCHING_DATA_SUCCESS':
         return{
             ...state,
-            pokemon:action.payload
+            joke:action.payload
         };
         default: 
         return state;

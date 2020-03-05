@@ -1,7 +1,7 @@
 import React from 'react';
-import {pokemonReducer} from '../src/reducers/index';
+import {jokeReducer} from '../src/reducers/index';
 import './App.css';
-import Pokemon from '../src/components/Pokemon';
+import Jokes from '../src/components/Jokes';
 
 function App(props) {
   return (
