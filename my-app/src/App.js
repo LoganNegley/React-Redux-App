@@ -6,7 +6,7 @@ import Jokes from '../src/components/Jokes';
 function App(props) {
   return (
     <div className="App">
-      <h1>Get Info Of A Random Pokemon</h1>
+      <h1>Get A Joke</h1>
       <Pokemon/>
     </div>
   );

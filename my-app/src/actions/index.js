@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const fetchPokemon = () => {
+export const fetchJokes = () => {
     return dispatch => {
         dispatch({type: 'FETCHING_POKEMON_START'})
         axios.get('https://icanhazdadjoke.com/', {headers:{'Accept': 'application/json'}})
@@ -8,7 +8,7 @@ export const fetchPokemon = () => {
             console.log(response)
             dispatch({type: 'FETCHING_DATA_SUCCESS', payload:response.data.joke})
         })
-        .catch(error => console.log(error, 'error at pokemon api call'))
+        .catch(error => console.log(error, 'error at dad joke api call'))
     }
 }
 
