@@ -19,8 +19,6 @@ const Pokemon = (props)=>{
             timeout={3000}
             />
         )}
-
-
         </div>
     );
 };
