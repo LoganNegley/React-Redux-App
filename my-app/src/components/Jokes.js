@@ -6,9 +6,9 @@ import Loader from 'react-loader-spinner';
 const Jokes = (props)=>{
     return (
         <div>
-        <button onClick={props.fetchJoke}>Lets Catch A New Pokemon</button>
+        <button onClick={props.fetchJokes}>Get A Dad Joke</button>
            {!props.joke && !props.isLoading && (
-               <h2>Catch a new Pokemon</h2>
+               <h2>Get a dad joke now!!</h2>
            )}
         {props.isLoading && (
             <Loader
@@ -21,7 +21,7 @@ const Jokes = (props)=>{
         )}
 
         {props.joke && !props.isLoading && (
-                <h1>Pokemon</h1>
+            <h1>{props.joke.joke}</h1>
         )}
         </div>
     );
