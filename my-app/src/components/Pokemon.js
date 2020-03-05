@@ -19,6 +19,10 @@ const Pokemon = (props)=>{
             timeout={3000}
             />
         )}
+
+        {props.pokemon && !props.isLoading && (
+                <h1>Pokemon</h1>
+        )}
         </div>
     );
 };
